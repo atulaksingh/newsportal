@@ -19,8 +19,6 @@ function LatestNews() {
         <div className="grid grid-cols-12 gap-5 md:8 sm:px-5 md:px px-2">
           <div className="lg:col-span-8 md:col-span-12 sm:col-span-12 col-span-12 ">
             <Latestpage />
-            <Latestpage />
-            <Latestpage />
           </div>
           <div className="col-span-4 lg:block hidden">
             <Contentcard3 />

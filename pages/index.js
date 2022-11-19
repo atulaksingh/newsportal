@@ -8,12 +8,12 @@ import Content from "../components/Content";
 import Detailspage from "../components/Detailspage";
 import JustBing from "../components/JustBing";
 import LatestNews from "../components/LatestNews";
-
+import Link from "next/link";
 import Layout from "../components/layout/layout";
 import Photos from "../components/Photos";
 import styles from "../styles/Home.module.css";
-import Slug from "./Slug/[slug]";
-import NavitemLink from "../components/Card/NavitemLink";
+import Slug from "./post/[slug]";
+import NavitemLink from "./NavitemLink";
 import MobileDC3 from "../components/Card/MobileDC3";
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
       <div className="fontcss">
         <Layout>
           <div className="my-36">
+            {/* <Link href={"/post/kuchbhi"}> */}
             <div className="my-5">
               <AddTop />
             </div>
@@ -40,9 +41,8 @@ export default function Home() {
             <Television />
             <Photos />
             <LatestNews />
-            <Slug />
-            <NavitemLink />
-            <MobileDC3 />
+            {/* <Slug /> */}
+            {/* </Link> */}
           </div>
         </Layout>
       </div>

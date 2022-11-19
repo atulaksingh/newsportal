@@ -1,10 +1,27 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Hideheader from "../Card/Hidesearch";
 import Hidesearch from "../Card/Hidesearch";
 import Hidenav from "../Card/Hidenav";
-
+import NavitemLink from "../../pages/NavitemLink";
+const options = ["Italy", "Spain", "Greece"];
 function Header() {
+  const [selected, setSelected] = useState(options[0]);
+  const dropdownList = [
+    {
+      child1: "hdbhs",
+      child2: "hdbhs",
+      child3: "hdbhs",
+    },
+
+    {
+      child1: "hdbhs",
+      child2: "hdbhs",
+      child3: "hdbhs",
+    },
+  ];
+
   const [status, setStatus] = useState(false);
   const [searchtog, setSearchtog] = useState(false);
   const searchtoggle = () => {
@@ -19,7 +36,7 @@ function Header() {
       {/* //small  navbar /// */}
 
       <div className="">{status ? <Hidenav nav={navtoggle} /> : null}</div>
-
+      {/* <NavitemLink /> */}
       {/* ////searchbaar/// */}
       <div className="">
         {searchtog ? <Hidesearch toggle={searchtoggle} /> : null}
@@ -167,231 +184,248 @@ function Header() {
                 </div>
               </div>
 
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
+              {/* <form>
+                <select
+                  value={selected}
+                  onChange={(e) => setSelected(e.target.value)}
+                >
+                  {options.map((value) => (
+                    <option value={value} key={value}>
+                      {value}
+                    </option>
+                  ))}
+                </select>
+              </form>
+
+              {console.log(dropdownList)} */}
+              <Link href={"/NavitemLink"}>
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
+
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
-                <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
-                  Dropdown
-                </button>
-                <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 1
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
-                  >
-                    Link 2
-                  </div>
-                  <div
-                    href="#"
-                    className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
-                  >
-                    Link 3
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown px-3 float-left pb-8 hover:border-b-2 cursor-pointer   border-blue-500 ">
+                  <button class="dropbtn text-base border-none outline-none   pb-[10px] ">
+                    Dropdown
+                  </button>
+                  <div class="dropdown-content hidden absolute min-w-[160px] z-10  bg-[#f9f9f9] shadow-[0px 8px 16px 0px rgba(0,0,0,0.2)] ">
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 1
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[12px] hover:bg-[#777]"
+                    >
+                      Link 2
+                    </div>
+                    <div
+                      href="#"
+                      className="block no-underline text-left float-none px-[16px] py-[10px] hover:bg-[#777]"
+                    >
+                      Link 3
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="col-span-1 my-auto   flex justify-center">

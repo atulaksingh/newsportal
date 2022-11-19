@@ -35,7 +35,7 @@ function Contentcard2() {
   return (
     <>
       {card2item.map((item) => (
-        <div className="border border-black box-border bg-black my-3">
+        <div className="border border-black box-border bg-black my-3 hover:cursor-pointer">
           <div className="relative h-80 w-70">
             <Image
               src={item.img}

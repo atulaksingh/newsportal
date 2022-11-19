@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Latestpage from "./Latestpage";
-import Contentcard3 from "./Contentcard3";
-import Add3 from "../Advertisement/Add3";
+import Latestpage from "../components/Card/Latestpage";
+import Contentcard3 from "../components/Card/Contentcard3";
+import Add3 from "../components/Advertisement/Add3";
 function NavitemLink() {
   return (
     <>
-      <div className="md:px-10 sm:px-6 px-2  ">
+      <div className="md:px-10 sm:px-6 px-2  mt-40">
         <div className=" ">
           <div
             className="grid grid-cols-12 overflow-hidden  sm:bg-gradient-to-r sm:from-black sm:via-neutral-900  sm:to-transparent sm:h-[291px] md:[310px]
@@ -51,12 +51,12 @@ function NavitemLink() {
           </ul>
         </div>
         <div className="grid grid-cols-12 gap-5 ">
-          <div className="lg:col-span-8 md:col-span-8 sm:col-span-12 col-span-12 ">
+          <div className="lg:col-span-8 md:col-span-12 sm:col-span-12 col-span-12 ">
             <Latestpage />
             <Latestpage />
             <Latestpage />
           </div>
-          <div className="lg:col-span-4 md:col-span-4 md:block hidden  ">
+          <div className="lg:col-span-4 md:col-span-4 lg:block hidden  ">
             <div className="">
               <Add3 />
             </div>

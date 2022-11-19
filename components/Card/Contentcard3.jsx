@@ -157,45 +157,6 @@ function Contentcard3() {
 
   return (
     <>
-      {/* <div className="">
-        <div className="p-6 ">
-          <h1 className=" border-b-2 border-gray-500 "></h1>
-          <ul className="relative bottom-4 sm:left-[46%] lg:left-[35%] left-[38%] w-24   ">
-            <li className="bg-yellow-300 text-center  text-black p-0 font-semiboldbold  rounded-full leading-8">
-              TRENDING
-            </li>
-          </ul>
-        </div>
-        {card3item.map((item) => (
-          <div className="grid grid-cols-12 pb-2 hover:cursor-pointer   ">
-            <div className="lg:col-span-5 md:col-span-3 sm:col-span-3 col-span-4 ">
-              <div
-                className="relative  -z-30 lg:h-24 lg:w-28 md:h-[130px] md:w-[180px] sm:h-[110px] sm:w-[150px]
-               h-[85px] w-[100px] lg:my-auto md:justify-start object-cover max-w-sm"
-              >
-                <Image
-                  src={item.img}
-                  objectFit="contain"
-                  layout="fill"
-                  className="w-fit h-fit"
-                  alt="abt img"
-                />
-              </div>
-            </div>
-            <div className="font lg:col-span-7 md:col-span-9 sm:col-span-9 col-span-8 break-words sm:pl-0 pl-3">
-              <div className="justify-center box-border mx-1">
-                <span className="text-zinc-400 font-bold text-xs">
-                  {item.News}
-                </span>
-                /<span className=" text-zinc-400  text-xs">{item.date}</span>
-                <h4 className="text-gray-00 font-sans font-bold text-xs ">
-                  {item.title}
-                </h4>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div> */}
       <div className="">
         <div className="p-6 ">
           <h1 className=" border-b-2 border-gray-500 "></h1>
@@ -206,7 +167,7 @@ function Contentcard3() {
           </ul>
         </div>
         {card3item.map((item) => (
-          <div className="flex gap-2  py-2">
+          <div className="flex gap-2  my-2 hover:cursor-pointer ">
             <div>
               <div className="w-28 aspect-video relative">
                 <Image src={item.img} layout="fill" className="absolute " />
@@ -214,7 +175,7 @@ function Contentcard3() {
             </div>
             <div>
               {/* <h1 className="line-clamp-3">jssb</h1> */}
-              <span className="text-zinc-400 font-bold text-xs">
+              <span className="text-zinc-400 font-bold text-xs mt-0">
                 {item.News}
               </span>
               /<span className=" text-zinc-400  text-xs">{item.date}</span>

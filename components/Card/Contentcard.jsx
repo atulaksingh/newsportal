@@ -52,9 +52,9 @@ function Contentcard() {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-12  hover:cursor-pointer my-3">
+        <div className="grid grid-cols-12   ">
           {NewsData.map((item) => (
-            <div className="lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12">
+            <div className="lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12 my-3 hover:cursor-pointer">
               <div className="relative h-48 mb-0    ">
                 <Image
                   src={item.img}

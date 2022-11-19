@@ -20,7 +20,11 @@ const Layout = ({
       )}
       <main>{children}</main>
 
-      {!hideFooter && <footer>{/* <Footer /> */}</footer>}
+      {!hideFooter && (
+        <footer>
+          <Footer />
+        </footer>
+      )}
     </>
   );
 };

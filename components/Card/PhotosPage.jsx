@@ -2,6 +2,159 @@ import React from "react";
 import Image from "next/image";
 
 function PhotosPage() {
+  const card3item = [
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1668425005/ashneer__1__2022-11-2-9-5-54_thumbnail_2022-11-12-4-58-27_thumbnail_w4sdwg.jpg",
+      News: "Tranding News",
+      date: "Nov 10 2023",
+      title:
+        "VIRAL! Shah Rukh Khan Celebratesni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood",
+    }, // will be passed to the page component as props
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1668425005/ashneer__1__2022-11-2-9-5-54_thumbnail_2022-11-12-4-58-27_thumbnail_w4sdwg.jpg",
+
+      News: "Tranding News",
+      date: "Nov 05 2023",
+      title:
+        "Salman Khan Defamation Case: HC Judge Hearing Actor’s Plea RETIRES, Says, ‘I Tried My Best, ’",
+    },
+
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1668425005/ashneer__1__2022-11-2-9-5-54_thumbnail_2022-11-12-4-58-27_thumbnail_w4sdwg.jpg",
+      News: "Tranding News",
+      date: "Nov 07 2023",
+      title:
+        "Uni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1668425005/ashneer__1__2022-11-2-9-5-54_thumbnail_2022-11-12-4-58-27_thumbnail_w4sdwg.jpg",
+      News: "Tranding News",
+      date: "Nov 10 2023",
+      title: "VIRAL! Shah Rukh Khan Celebrates",
+    }, // will be passed to the page component as props
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1668425005/ashneer__1__2022-11-2-9-5-54_thumbnail_2022-11-12-4-58-27_thumbnail_w4sdwg.jpg",
+
+      News: "Tranding  News",
+      date: "Nov 05 2023",
+      title:
+        "Salman Khan Defamation Case: HC Judge Hearing Actor’s Plea RETIRES, Says, ‘I Tried My Best, Unable To Complete The Final Judgement’",
+    },
+
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1668425005/ashneer__1__2022-11-2-9-5-54_thumbnail_2022-11-12-4-58-27_thumbnail_w4sdwg.jpg",
+      News: "Tranding / News",
+      date: "Nov 07 2023",
+      title:
+        "Uni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "Tranding / News",
+      date: "Nov 10 2023",
+      title: "VIRAL! Shah Rukh Khan Celebrates",
+    }, // will be passed to the page component as props
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+
+      News: "Tranding / News",
+      date: "Nov 05 2023",
+      title:
+        "Salman Khan Defamation Case: HC Judge Hearing Actor’s Plea RETIRES, Says, ‘I Tried My Best, Unable To Complete The Final Judgement’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "TRANDING NEWS",
+      date: "Nov 06 2023",
+      title:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem4 Iure",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+      News: "Tranding / News",
+      date: "Nov 07 2023",
+      title:
+        "Uni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "Tranding / News",
+      date: "Nov 10 2023",
+      title: "VIRAL! Shah Rukh Khan Celebrates",
+    }, // will be passed to the page component as props
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+
+      News: "Tranding / News",
+      date: "Nov 05 2023",
+      title:
+        "Salman Khan Defamation Case: HC Judge Hearing Actor’s Plea RETIRES, Says, ‘I Tried My Best, Unable To Complete The Final Judgement’",
+    },
+
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+      News: "Tranding / News",
+      date: "Nov 07 2023",
+      title:
+        "Uni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "Tranding / News",
+      date: "Nov 10 2023",
+      title: "VIRAL! Shah Rukh Khan Celebrates",
+    }, // will be passed to the page component as props
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+
+      News: "Tranding / News",
+      date: "Nov 05 2023",
+      title:
+        "Salman Khan Defamation Case: HC Judge Hearing Actor’s Plea RETIRES, Says, ‘I Tried My Best, Unable To Complete The Final Judgement’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "TRANDING NEWS",
+      date: "Nov 06 2023",
+      title:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem4 Iure",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+      News: "Tranding / News",
+      date: "Nov 07 2023",
+      title:
+        "Uni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "Tranding / News",
+      date: "Nov 10 2023",
+      title: "VIRAL! Shah Rukh Khan Celebrates",
+    }, // will be passed to the page component as props
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+
+      News: "Tranding / News",
+      date: "Nov 05 2023",
+      title:
+        "Salman Khan Defamation Case: HC Judge Hearing Actor’s Plea RETIRES, Says, ‘I Tried My Best, Unable To Complete The Final Judgement’",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667554892/news/Tu_Zakhm_Hai_2022-10-14-14-58-2_thumbnail_gt0le6.jpg",
+      News: "TRANDING NEWS",
+      date: "Nov 06 2023",
+      title:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem4 Iure",
+    },
+    {
+      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
+      News: "Tranding / News",
+      date: "Nov 07 2023",
+      title:
+        "Uni Ki Yaari: This OTT Series Takes Us Back To College Life, ‘Light-Hearted Peek Into Journey To Manage Adulthood’",
+    },
+  ];
   return (
     <>
       <div className="box-border">
@@ -27,18 +180,6 @@ function PhotosPage() {
                 corrupti.
               </h4>
             </div>
-            {/* <div className="bg-gray-500 ">
-            <div className="relative fill-white  w-8 -mt-64 bg-[#464444c7] rounded-full p-2  ml-56">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="ionicon"
-                viewBox="0 0 512 512"
-              >
-                <circle cx="256" cy="272" r="64"></circle>
-                <path d="M432 144h-59c-3 0-6.72-1.94-9.62-5l-25.94-40.94a15.52 15.52 0 00-1.37-1.85C327.11 85.76 315 80 302 80h-92c-13 0-25.11 5.76-34.07 16.21a15.52 15.52 0 00-1.37 1.85l-25.94 41c-2.22 2.42-5.34 5-8.62 5v-8a16 16 0 00-16-16h-24a16 16 0 00-16 16v8h-4a48.05 48.05 0 00-48 48V384a48.05 48.05 0 0048 48h352a48.05 48.05 0 0048-48V192a48.05 48.05 0 00-48-48zM256 368a96 96 0 1196-96 96.11 96.11 0 01-96 96z"></path>
-              </svg>
-            </div>
-          </div> */}
           </div>
         </div>
       </div>

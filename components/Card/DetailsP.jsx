@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import InstagramEmbed from "react-instagram-embed";
 function DetailsP() {
   return (
     <>
@@ -18,7 +19,6 @@ function DetailsP() {
               television news
             </li>
           </ul>
-
           <div className="font-bold text-4xl leading-normal tracking-wide py-1 font-sans">
             <h4>
               Kundali Bhagya's Shraddha Arya REACTS To Getting Robbed By Her
@@ -40,6 +40,8 @@ function DetailsP() {
               alt="abt img"
             />
           </div>
+
+          <script async src="//www.instagram.com/embed.js"></script>
           <div className="grid lg:grid-cols-12 md:grid-cols-12 sm:grid-cols-12  gap-3  ">
             <div className="lg:col-span-1 md:col-span-12 sm:col-span-12 ">
               <div className="sticky top-32 lg:flex-col   lg:g-5 sm:flex justify-center  flex gap-2 sm:g-4 md:gap-5  ">

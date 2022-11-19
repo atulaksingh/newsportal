@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Oswald, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 /* html,
 body {
   padding: 0;
