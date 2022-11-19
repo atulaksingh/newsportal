@@ -100,13 +100,15 @@ function Header() {
             <div className="sm:col-span-2 col-span-2 ">
               <div className="text-center text-xl text-gray-900">
                 <div className="relative h-10 w-30 sm:h-10 sm:w-40 mx-auto my-2 hover:cursor-pointer">
-                  <Image
-                    src="https://res.cloudinary.com/dt0j68vdr/image/upload/v1667462367/news/flat_logo_kegalp.png"
-                    objectFit="contain"
-                    layout="fill"
-                    className="w-fit h-fit"
-                    alt="abt img"
-                  />
+                  <Link href={"/"}>
+                    <Image
+                      src="https://res.cloudinary.com/dt0j68vdr/image/upload/v1667462367/news/flat_logo_kegalp.png"
+                      objectFit="contain"
+                      layout="fill"
+                      className="w-fit h-fit"
+                      alt="abt img"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>

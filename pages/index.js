@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import AddTop from "../components/Advertisement/AddTop";
 import BollywoodNews from "../components/BollywoodNews";
-import Contentcard from "../components/Card/Contentcard";
 import Television from "../components/Television";
 import Content from "../components/Content";
 import Detailspage from "../components/Detailspage";
@@ -22,7 +21,6 @@ export default function Home() {
       <div className="fontcss">
         <Layout>
           <div className="my-36">
-            {/* <Link href={"/post/kuchbhi"}> */}
             <div className="my-5">
               <AddTop />
             </div>
@@ -41,8 +39,6 @@ export default function Home() {
             <Television />
             <Photos />
             <LatestNews />
-            {/* <Slug /> */}
-            {/* </Link> */}
           </div>
         </Layout>
       </div>

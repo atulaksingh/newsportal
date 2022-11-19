@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 function PhotosPage() {
   const card3item = [
     {
@@ -160,26 +160,28 @@ function PhotosPage() {
       <div className="box-border">
         <div className="col-span-1 opacity-80  hover:opacity-100 duration-300 sm:my-2 md:my-2 hover:text-opacity-40">
           <div className="   hover:cursor-pointer my-1">
-            <div className="relative h-48  mb-0 w-full">
-              <Image
-                src="https://res.cloudinary.com/dt0j68vdr/image/upload/v1667653805/news/1-SINGLE-IMAGE_2021-9-28-10-21-10_thumbnail_lizpfw.jpg"
-                objectFit="contain"
-                layout="fill"
-                className="w-fit h-fit"
-                alt="abt img"
-              />
-            </div>
+            <Link href={"/post/k"}>
+              <div className="relative h-48  mb-0 w-full">
+                <Image
+                  src="https://res.cloudinary.com/dt0j68vdr/image/upload/v1667653805/news/1-SINGLE-IMAGE_2021-9-28-10-21-10_thumbnail_lizpfw.jpg"
+                  objectFit="contain"
+                  layout="fill"
+                  className="w-fit h-fit"
+                  alt="abt img"
+                />
+              </div>
 
-            <div className="justify-start  ">
-              <span className="text-zinc-400 font-bold text-sm">
-                TRANDING NEWS
-              </span>
-              /<span className=" text-zinc-400  text-xs">/ Nov 05 2023</span>
-              <h4 className="text-black font-semibold text-base ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                corrupti.
-              </h4>
-            </div>
+              <div className="justify-start  ">
+                <span className="text-zinc-400 font-bold text-sm">
+                  TRANDING NEWS
+                </span>
+                /<span className=" text-zinc-400  text-xs">/ Nov 05 2023</span>
+                <h4 className="text-black font-semibold text-base ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  corrupti.
+                </h4>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

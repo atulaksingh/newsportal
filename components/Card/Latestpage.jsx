@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 function Latestpage() {
   const card3item = [
     {
@@ -194,33 +195,35 @@ function Latestpage() {
       </div> */}
       <div className="">
         {card3item.map((item) => (
-          <div className="flex gap-6  border-solid border-t-2 border-gray-200  opacity-80  hover:opacity-100 duration-300  hover:text-opacity-40 cursor-pointer my-2">
-            <div className="border-solid border-t-2 border-gray-200 ">
-              <div className="aspect-video  relative sm:h-52 h-28 ">
-                <div className="">
-                  <Image src={item.img} layout="fill" className="absolute " />
+          <Link href={"/post/k"}>
+            <div className="flex gap-6  border-solid border-t-2 border-gray-200  opacity-80  hover:opacity-100 duration-300  hover:text-opacity-40 cursor-pointer my-2">
+              <div className="border-solid border-t-2 border-gray-200 ">
+                <div className="aspect-video  relative sm:h-52 my-3 h-28 ">
+                  <div className="">
+                    <Image src={item.img} layout="fill" className="absolute " />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="justify-start hover:opacity-100 duration-300 sm:my-2 md:my-2 hover:text-opacity-40 cursor-pointer">
+                  <span className="text-zinc-400 font-bold text-sm">
+                    TRANDING NEWS
+                  </span>
+                  /<span className=" text-zinc-400  text-xs"> Nov 05 2023</span>
+                  <h4 className="text-black font-medium text-base  sm:text-lg md:text-xl lg:text-2xl font-[Oswald,sans-serif]  line-clamp-5 ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim, corrupti.d Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Recusandae, unde.
+                  </h4>
+                  <div className="text-zinc-500 sm:block hidden ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veniam placeat, esse vitae corrupti laboriosam at? Lorem
+                    ipsum dolor sit amet.
+                  </div>
                 </div>
               </div>
             </div>
-            <div>
-              <div className="justify-start hover:opacity-100 duration-300 sm:my-2 md:my-2 hover:text-opacity-40 cursor-pointer">
-                <span className="text-zinc-400 font-bold text-sm">
-                  TRANDING NEWS
-                </span>
-                /<span className=" text-zinc-400  text-xs"> Nov 05 2023</span>
-                <h4 className="text-black font-medium text-base  sm:text-lg md:text-xl lg:text-2xl font-[Oswald,sans-serif]  line-clamp-5 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                  corrupti.d Lorem ipsum, dolor sit amet consectetur adipisicing
-                  elit. Recusandae, unde.
-                </h4>
-                <div className="text-zinc-500 sm:block hidden ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam placeat, esse vitae corrupti laboriosam at? Lorem ipsum
-                  dolor sit amet.
-                </div>
-              </div>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>

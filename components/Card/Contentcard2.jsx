@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 function Contentcard2() {
   const card2item = [
     {
@@ -36,25 +36,27 @@ function Contentcard2() {
     <>
       {card2item.map((item) => (
         <div className="border border-black box-border bg-black my-3 hover:cursor-pointer">
-          <div className="relative h-80 w-70">
-            <Image
-              src={item.img}
-              objectFit="contain"
-              layout="fill"
-              className="w-fit h-fit"
-              alt="abt img"
-            />
-          </div>
+          <Link href={"/post/k"}>
+            <div className="relative h-80 w-70 ">
+              <Image
+                src={item.img}
+                objectFit="contain"
+                layout="fill"
+                className=" w-fit h-fit "
+                alt="abt img"
+              />
+            </div>
 
-          <div className="pl-4 ">
-            <span className="text-green-500 font-bold text-sm pt-2">
-              {item.News} /
-            </span>
-            / <span className=" text-white  text-sm">{item.date}</span>
-            <h4 className="text-white  font-black text-3xl leading-relaxed py-3 ">
-              {item.title}
-            </h4>
-          </div>
+            <div className="pl-4 ">
+              <span className="text-green-500 font-bold text-sm pt-2">
+                {item.News} /
+              </span>
+              / <span className=" text-white  text-sm">{item.date}</span>
+              <h4 className="text-white  font-black text-3xl leading-relaxed py-3 ">
+                {item.title}
+              </h4>
+            </div>
+          </Link>
         </div>
       ))}
       {/* <h1>hjsagd</h1> */}

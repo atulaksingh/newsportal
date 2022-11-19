@@ -34,7 +34,7 @@ a {
     background: black;
   }
 }
-
+new
 
 */
 .fontcss {
@@ -62,4 +62,12 @@ a {
   top: 0;
   width: 50%;
   height: 100%;
+}
+
+.newimg {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 16%,
+    rgba(0, 0, 7, 0.9420810560552346) 100%
+  );
 }

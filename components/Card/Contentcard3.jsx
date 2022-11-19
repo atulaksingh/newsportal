@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 function Contentcard3() {
   const card3item = [
     {
@@ -167,23 +168,25 @@ function Contentcard3() {
           </ul>
         </div>
         {card3item.map((item) => (
-          <div className="flex gap-2  my-2 hover:cursor-pointer ">
-            <div>
-              <div className="w-28 aspect-video relative">
-                <Image src={item.img} layout="fill" className="absolute " />
+          <Link href={"/post/k"}>
+            <div className="flex gap-2  my-2 hover:cursor-pointer ">
+              <div>
+                <div className="w-28 aspect-video relative">
+                  <Image src={item.img} layout="fill" className="absolute " />
+                </div>
+              </div>
+              <div>
+                {/* <h1 className="line-clamp-3">jssb</h1> */}
+                <span className="text-zinc-400 font-bold text-xs mt-0">
+                  {item.News}
+                </span>
+                /<span className=" text-zinc-400  text-xs">{item.date}</span>
+                <h4 className="line-clamp-3 text-gray-00 font-sans font-bold text-xs ">
+                  {item.title}
+                </h4>
               </div>
             </div>
-            <div>
-              {/* <h1 className="line-clamp-3">jssb</h1> */}
-              <span className="text-zinc-400 font-bold text-xs mt-0">
-                {item.News}
-              </span>
-              /<span className=" text-zinc-400  text-xs">{item.date}</span>
-              <h4 className="line-clamp-3 text-gray-00 font-sans font-bold text-xs ">
-                {item.title}
-              </h4>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>
