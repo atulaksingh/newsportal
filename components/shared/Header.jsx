@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Hideheader from "../Card/Hidesearch";
+
 import Hidesearch from "../Card/Hidesearch";
 import Hidenav from "../Card/Hidenav";
-import NavitemLink from "../../pages/NavitemLink";
+
 const options = ["Italy", "Spain", "Greece"];
 function Header() {
   const [selected, setSelected] = useState(options[0]);

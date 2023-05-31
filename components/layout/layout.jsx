@@ -1,4 +1,4 @@
-import Header from "../Shared/Header";
+import Header from "../shared/Header";
 import Footer from "../shared/Footer";
 import Head from "next/head";
 
