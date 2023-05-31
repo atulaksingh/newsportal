@@ -25,12 +25,6 @@ function Contentcard2() {
       title:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. lorem4 Iure",
     },
-    {
-      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667546529/news/7_2021-11-1-9-56-27_thumbnail_2022-11-4-6-24-37_thumbnail_wfzvva.jpg",
-      News: "Tranding / News",
-      date: "Nov 07 2023",
-      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure",
-    },
   ];
   return (
     <>

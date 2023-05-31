@@ -42,13 +42,6 @@ function Contentcard() {
       date: "Nov 05 2023",
       title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure",
     }, // will be passed to the page component as props
-    {
-      id: 2,
-      img: "https://res.cloudinary.com/dt0j68vdr/image/upload/v1667544888/news/Imran_2022-11-4-4-51-48_thumbnail_vziogl.jpg",
-      News: "TRANDING NEWS",
-      date: "Nov 05 2023",
-      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure",
-    },
   ];
   return (
     <>
